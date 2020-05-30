@@ -7,7 +7,7 @@ export const environment = {
 
   app_env: "dev",
   environmentUrl: "",
-  stripePublicKey: "pk_test_tQlHC8LOUlXdT1ZQDIaQJfJp00HViFTxbE"
+  stripePublicKey: "pk_test_roIckv7QQNVuly5cUWtMQLxt00NLz4YjZx"
 };
 
 /*
