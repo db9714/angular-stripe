@@ -1,0 +1,124 @@
+<div class="row">
+  <div class="col-md-6">
+    <h1>Stripe Integration with Angular</h1>
+    <h5 style="color: indianred;">** Fill all fields to generate token</h5>
+  </div>
+  <div style="flex-direction: row;">
+    <h5>First Name</h5>
+    <div class="password-input-field-style">
+      <input
+        matInput
+        class="input-style"
+        name="firstname"
+        type="text"
+        formControlName="firstname"
+        id="firstname"
+      />
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <h5>Last Name</h5>
+    <div class="password-input-field-style">
+      <input
+        class="input-style"
+        matInput
+        name="lastname"
+        type="text"
+        id="lastname"
+      />
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <h5>Email</h5>
+      <!-- <br /> -->
+      <div class="password-input-field-style">
+        <input
+          matInput
+          name="email"
+          id="emailadd"
+          type="email"
+          required
+          class="input-style"
+          formControlName="email"
+        />
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <h3>Payment Information</h3>
+    <div class="stripe-error-style center-align">
+      <!-- *ngIf="showStripeError" -->
+      <!-- {{ stripeValidationError }} -->
+    </div>
+    <div
+      id="card-errors"
+      class="stripe-error-style"
+      style="
+        /* height: 15px; */
+        font-family: ProximaNova-Extrabold;
+        font-size: 18px;
+        /* font-weight: 600; */
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: red;
+        margin-bottom: 12px;
+      "
+      role="alert"
+    ></div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <h5>Name On Credit Card</h5>
+        <div class="password-input-field-style">
+          <input matInput class="input-style" id="name" required />
+        </div>
+      </div>
+      <div class="col-md-6">
+        <h5>Credit Card Number</h5>
+        <div class="acc-card-number-outer-div">
+          <div class="password-input-field-style">
+            <div
+              id="card-number-element"
+              class="input-value card-number-field"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row" style="margin-bottom: 20px;">
+      <div class="col-md-6">
+        <h5>Exp.Date</h5>
+        <div class="acc-card-number-outer-div">
+          <div class="password-input-field-style">
+            <div
+              id="card-expiry-element"
+              class="input-value card-number-field"
+            ></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <h5>Sec. #</h5>
+        <div class="acc-card-number-outer-div">
+          <div class="password-input-field-style">
+            <div
+              id="card-cvc-element"
+              class="input-value card-number-field"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align: center;">
+      <button style="margin-bottom: 20px;" (click)="createUser()">
+        Submit
+      </button>
+    </div>
+  </div>
+</div>
