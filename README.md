@@ -4,12 +4,12 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.7.
 
-## Steps to run the Project :-
+### Steps to run the Project :-
 
-### Clone the repository.
-### Run the command "npm install stripe-angular --save" to install stripe(Make Sure you already have installed npm)
-### Create your account on stripe.com and replace your account stripe public key with projects environment.ts file.
-### Run command "ng serve"
+#### Clone the repository.
+#### Run the command "npm install stripe-angular --save" to install stripe(Make Sure you already have installed npm)
+#### Create your account on stripe.com and replace your account stripe public key with projects environment.ts file.
+#### Run command "ng serve"
 
 ### Dont forgot to Rate my repository.
 
