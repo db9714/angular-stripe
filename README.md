@@ -12,7 +12,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 #### 4.Run command "ng serve"
 
 ### Dont forgot to Rate my repository.
-
+### This project is hosted using hostman services on 
+### https://angular-stripe.hostman.site/
 
 ## Further help
 
