@@ -48,7 +48,10 @@ mat-card-content {
 }
 .password-input-field-style {
   background-color: #fff;
-  // padding: 10px;
+}
+.stripeElementStyle {
+  padding: 10px;
+  line-height: 2.5rem !important;
 }
 .login-button-style .mat-raised-button {
   color: white;
@@ -81,14 +84,10 @@ mat-card-content {
 .signup-form {
   margin-top: 50px;
 }
-.password-input-field-style
-  .mat-form-field-appearance-legacy
-  .mat-form-field-wrapper {
+.password-input-field-style .mat-form-field-appearance-legacy .mat-form-field-wrapper {
   padding: 0px !important;
 }
-.password-input-field-style
-  .mat-form-field-appearance-legacy
-  .mat-form-field-infix {
+.password-input-field-style .mat-form-field-appearance-legacy .mat-form-field-infix {
   padding: 0px !important;
 }
 .input-style {
@@ -178,4 +177,38 @@ mat-error {
 }
 .input-value {
   height: 1.5rem !important;
+}
+.btn-dark {
+  color: #fff;
+  background-color: #337ab7;
+  border-color: #337ab7;
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.stripe-error-style {
+  font-family: "ProximaNova-Extrabold", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: red;
+  margin-bottom: 12px;
 }

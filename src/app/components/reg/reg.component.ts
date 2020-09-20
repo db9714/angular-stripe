@@ -23,13 +23,16 @@ export class RegComponent implements OnInit, AfterViewInit {
   cardNumberElement: any;
   cardCvcElement: any;
   cardExpiryElement: any;
+  TokenValue: string
 
   message: string;
   constructor(
     private cd: ChangeDetectorRef,
     private router: Router
   ) { }
+
   ngAfterViewInit() { }
+
 
   ngOnInit() {
     this.stripe = Stripe(environment.stripePublicKey);
@@ -67,27 +70,27 @@ export class RegComponent implements OnInit, AfterViewInit {
         displayError.textContent = "";
       }
     });
+    this.TokenValue = "sss"
   }
 
 
   createUser() {
-    var firstname = document.getElementById("firstname").textContent
-    var lastname = document.getElementById("lastname").textContent
-    var email = document.getElementById("emailadd").textContent
-    var name = document.getElementById("name").textContent
-
     this.stripe.createToken(this.cardNumberElement).then(result => {
-      console.log("token", result.token);
-
-      if (result.token.id) {
-        var payload = {
-          card_token: result.token.id,
-          plan: "monthly",
-          email: email
-        };
-      }
+      alert("Token Created Successfully.")
+      console.log("token", result.token.id);
+      document.getElementById("token").style.display = "block"
+      this.TokenValue = "sss"
     });
 
+  }
+  resetForm() {
+    document.getElementById("firstname").value = "";
+    document.getElementById("lastname").value = ""
+    document.getElementById("emailadd").value = ""
+    document.getElementById("name").value = ""
+    this.cardNumberElement.destroy()
+    this.cardExpiryElement.destroy()
+    this.cardCvcElement.destroy()
   }
 }
 
